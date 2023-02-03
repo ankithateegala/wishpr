@@ -1,0 +1,7 @@
+<mat-card class="item" *ngIf="wish" (dblclick)="edit.emit(wish)">
+        to {{ wish.goal }}, I will
+        <h2>
+            {{ wish.description }}
+        </h2>
+        in a {{ wish.durationIn }}
+</mat-card>

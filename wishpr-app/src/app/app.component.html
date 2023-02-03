@@ -1,0 +1,9 @@
+<mat-toolbar color="primary">
+  <mat-icon>drag_indicator</mat-icon>
+  <span>WISHPR</span>
+</mat-toolbar>
+
+<div cdkDropList class="wish-list" (cdkDropListDropped)="drop($event)">
+  <p class="empty-label" *ngIf="wishes.length === 0">Empty list</p>
+  <app-wish class="wish-item" (edit)="editWishes($event)" *ngFor="let wish of wishes" cdkDrag [wish]="wish"></app-wish>
+</div>
